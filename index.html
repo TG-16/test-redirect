@@ -29,6 +29,7 @@
     const txRef = new URLSearchParams(window.location.search).get("tx_ref");
     const status = new URLSearchParams(window.location.search).get("status");
 
+    console.log(txRef, "  ", status);
     document.getElementById("openAppBtn").addEventListener("click", () => {
       window.location.href = `dagameter://payment?status=${status}&tx_ref=${txRef}`;
     });
